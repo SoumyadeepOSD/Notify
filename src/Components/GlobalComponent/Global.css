@@ -22,18 +22,56 @@
     font-size: 5rem;
 }
 
+.medium--text{
+    color: white;
+    font-size: 3rem;
+}
+
 .line{
-    background: linear-gradient(90deg, )
+    background: linear-gradient(90deg, rgb(174, 0, 255), rgb(0, 81, 255));
+    height: 0.5rem;
+    width: 6rem;
+    border-radius: 1rem;
+}
+
+.section--title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .tagline--container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
+
+.container--button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+.container--button p{
+    background: linear-gradient(90deg, rgb(174, 0, 255), rgb(0, 81, 255));
+    padding-inline: 5rem;
+    padding-block: 1rem;
+    border-radius: 2rem;
+    font-size: 2rem;
+    margin-block: 3rem;
+}
 @media (max-width: 1000px) {
 
     .big--text {
         color: white;
         font-size: 2.5rem;
+    }
+    .container--button p{
+        padding-inline: 3rem;
+        padding-block: 0.5rem;
+        border-radius: 2rem;
+        font-size: 1.5rem;
+        margin-block: 3rem;
     }
 }

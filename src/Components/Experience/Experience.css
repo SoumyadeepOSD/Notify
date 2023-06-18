@@ -1,0 +1,59 @@
+.Container--project{
+    display: flex;
+    margin-top: 8rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Experiences{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.verticle--line{
+    background: grey;
+    height: 10rem;
+    width: 0.1rem;
+}
+
+.numbering{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.number{
+    margin-right: 1rem;
+}
+
+.desc,
+.start,
+.end{
+    color: grey;
+}
+
+@media (min-width: 850px) {
+    .title{
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 850px) {
+    .title{
+        font-size: 1.5rem;
+    }
+    .ExpCard{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
+
+
