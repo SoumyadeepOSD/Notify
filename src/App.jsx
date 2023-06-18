@@ -5,12 +5,14 @@ import {Header} from './Components/Header/Header';
 import Hero from './Components/Hero/Hero';
 import Projects from './Components/Projects/Project';
 import Skills from './Components/Skills/Skills';
+import { CustomButton } from './Components/GlobalComponent/GlobalComponent';
 
 const App = () => {
   return(
     <div className="Container">
       <Header/>
       <Hero/>
+      <CustomButton/>
       <Skills/>
       <Projects/>
       <Experience/>
