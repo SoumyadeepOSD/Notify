@@ -6,9 +6,9 @@ const Hero = () => {
     return (
         <div className="Container--hero large-spacing">
             <div>
-                <h1 className='big--text'>Hi, I'm Soumyadeep</h1>
+                <h1 className='big--text'>Hi, I'm <span className='gradient--text'>Soumyadeep</span></h1>
                 <h1 className='big--text'>Welcome to my</h1>
-                <h1 className='big--text'>Portfolio</h1>
+                <h1 className='big--text gradient--text'>Portfolio</h1>
             </div>
             <lottie-player
                 className='lottie--animation'

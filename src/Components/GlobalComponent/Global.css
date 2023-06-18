@@ -22,6 +22,10 @@
     font-size: 5rem;
 }
 
+.line{
+    background: linear-gradient(90deg, )
+}
+
 .tagline--container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);

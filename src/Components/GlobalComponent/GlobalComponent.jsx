@@ -25,7 +25,7 @@ const PopupMenu = () => {
 
 const DecorationLine = () => {
     return (
-        <div>
+        <div className='line'>
             line
         </div>
     );

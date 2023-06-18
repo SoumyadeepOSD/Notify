@@ -48,11 +48,11 @@ const Header = () => {
                 : 
                 (
                     <div className='header--tabs'>
-                        <p className='tab'>Home</p>
-                        <p className='tab'>Skills</p>
-                        <p className='tab'>Projects</p>
-                        <p className='tab'>Experience</p>
-                        <p className='tab'>Contact</p>
+                        <p className='tab'><a href="">Home</a></p>
+                        <p className='tab'><a href="">Skills</a></p>
+                        <p className='tab'><a href="">Projects</a></p>
+                        <p className='tab'><a href="">Experience</a></p>
+                        <p className='tab'><a href="">Contact</a></p>
                     </div>
                 )
             }

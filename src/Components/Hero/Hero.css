@@ -1,5 +1,4 @@
 .Container--hero {
-    background: red;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -12,6 +11,12 @@
 .lottie--animation {
     height: 1rem;
     width: 1rem;
+}
+
+.gradient--text{
+    background: -webkit-linear-gradient(180deg, rgb(174, 0, 255), rgb(0, 81, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .large-spacing {
