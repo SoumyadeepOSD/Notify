@@ -1,0 +1,29 @@
+.Container--header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Website--logo{
+    height: 10rem;
+    width: 10rem;
+}
+
+.Mobile--menu--icon{
+    height: 2rem;
+    width: 2rem;
+}
+
+.header--tabs{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;   
+}
+
+.header--tabs .tab{
+    font-size: 2rem;
+}
+

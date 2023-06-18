@@ -1,0 +1,35 @@
+.PopupCardStyle {
+    background: gray;
+    color: white;
+    border-radius: 1rem;
+    width: 80%;
+    padding-bottom: 10%;
+    left: 10%;
+    top: 5%;
+    position: absolute;
+    padding-inline: 2rem;
+    padding-top: 2rem;
+}
+
+.mobileTab {
+    font-weight: bolder;
+    font-size: large;
+    margin-top: 0.5rem;
+}
+
+.big--text {
+    color: white;
+    font-size: 5rem;
+}
+
+.tagline--container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+@media (max-width: 1000px) {
+
+    .big--text {
+        color: white;
+        font-size: 2.5rem;
+    }
+}

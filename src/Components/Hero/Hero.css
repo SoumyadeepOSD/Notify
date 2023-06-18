@@ -1,0 +1,28 @@
+.Container--hero {
+    background: red;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+    padding-inline: 6rem;
+}
+
+.lottie--animation {
+    height: 1rem;
+    width: 1rem;
+}
+
+.large-spacing {
+    margin-inline: 3rem;
+}
+
+@media (max-width: 850px) {
+    .large-spacing {
+        margin-inline: 1rem;
+    }
+    .Container--hero{
+        padding-inline: 2rem;
+    }
+}
