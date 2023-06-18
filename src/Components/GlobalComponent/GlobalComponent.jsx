@@ -2,6 +2,7 @@ import '../GlobalComponent/Global.css';
 import { useContext } from 'react';
 import { MyContext } from '../Header/Header';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import PropTypes from 'prop-types';
 
 const PopupMenu = () => {
     const { isopen, MenuOpenClose } = useContext(MyContext);
@@ -26,11 +27,30 @@ const PopupMenu = () => {
 const DecorationLine = () => {
     return (
         <div className='line'>
-            line
         </div>
     );
 }
 
 
-export { PopupMenu, DecorationLine };
+const SectionTitle = ({title}) => {
+    return(
+        <div className='section--title'>
+            <h2 className='medium--text'>{title}</h2>
+            <DecorationLine/>
+        </div>
+    );
+}
 
+const CustomButton = () => {
+    return(
+        <div className='container--button'>
+            <p>My Resume</p>
+        </div>
+    );
+}
+
+export { PopupMenu, DecorationLine, SectionTitle, CustomButton };
+
+SectionTitle.propTypes = {
+    title: PropTypes.string.isRequired
+  }
