@@ -33,34 +33,45 @@ const Header = () => {
         }
     }, [windowDim])
     return (
-        <Reveal>
-            <div className='Container--header Spacing'>
-                <MyContext.Provider value={{ isopen, MenuOpenClose }}>
-                    <img src={Logo} alt="logo" className='Website--logo' />
-                    {
-                        windowDim.winWidth < 1000
-                            ? (
-                                isopen
-                                    ?
-                                    (
-                                        <PopupMenu option={isopen} task={MenuOpenClose} />
-                                    )
-                                    : <AiOutlineMenu onClick={MenuOpenClose} className='Mobile--menu--icon' />
-                            )
-                            :
-                            (
-                                <div className='header--tabs'>
+
+        <div className='Container--header Spacing'>
+            <MyContext.Provider value={{ isopen, MenuOpenClose }}>
+                <Reveal>
+                <img src={Logo} alt="logo" className='Website--logo' />
+                </Reveal>
+                {
+                    windowDim.winWidth < 1000
+                        ? (
+                            isopen
+                                ?
+                                (
+                                    <PopupMenu option={isopen} task={MenuOpenClose} />
+                                )
+                                : <AiOutlineMenu onClick={MenuOpenClose} className='Mobile--menu--icon' />
+                        )
+                        :
+                        (
+                            <div className='header--tabs'>
+                                <Reveal>
                                     <p className='tab'><a href="/">Home</a></p>
+                                </Reveal>
+                                <Reveal>
                                     <p className='tab'><a href="#skill">Skills</a></p>
+                                </Reveal>
+                                <Reveal>
                                     <p className='tab'><a href="#project">Projects</a></p>
+                                </Reveal>
+                                <Reveal>
                                     <p className='tab'><a href="#experience">Experience</a></p>
+                                </Reveal>
+                                <Reveal>
                                     <p className='tab'><a href="#contact">Contact</a></p>
-                                </div>
-                            )
-                    }
-                </MyContext.Provider>
-            </div>
-        </Reveal>
+                                </Reveal>
+                            </div>
+                        )
+                }
+            </MyContext.Provider>
+        </div>
     )
 }
 

@@ -5,12 +5,17 @@ import { Reveal } from '../GlobalComponent/GlobalComponent';
 
 const Hero = () => {
     return (
-        <Reveal>
         <div className="Container--hero large-spacing">
             <div>
+                <Reveal>
                 <h1 className='big--text'>Hi, I'm <span className='gradient--text'>Soumyadeep</span></h1>
+                </Reveal>
+                <Reveal>
                 <h1 className='big--text'>Welcome to my</h1>
+                </Reveal>
+                <Reveal>
                 <h1 className='big--text gradient--text'>Portfolio</h1>
+                </Reveal>
             </div>
             <lottie-player
                 className='lottie--animation'
@@ -22,7 +27,6 @@ const Hero = () => {
             >
             </lottie-player>
         </div>
-        </Reveal>
     )
 }
 

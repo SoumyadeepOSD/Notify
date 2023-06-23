@@ -16,7 +16,7 @@
 }
 
 .header--tabs{
-    width: 50%;
+    width: 150%;
     display: flex;
     flex-direction: row;
     align-items: center;

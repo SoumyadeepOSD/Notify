@@ -7,27 +7,27 @@ import { Bs1Circle, Bs2Circle, Bs3Circle, Bs4Circle, Bs5Circle } from "react-ico
 
 const Experience = () => {
   return (
-    <Reveal>
       <div className="Container--project" id="experience">
         <SectionTitle title="Experiences" />
         <div className="Experiences">
           {
             data.map((e, i) => {
               return (
-                <ExperienceCard key={e.id || i}
+                <Reveal key={e.id || i}>
+                <ExperienceCard 
                   id={e.id}
                   Icon={e.Icon}
                   Position={e.Position}
                   Desc={e.Desc}
                   Start={e.Start}
                   End={e.End} />
+                </Reveal>
               );
             })
           }
           <ExperienceCard Position="Developer" Desc="Best Developer" Start="21.02.2021" End="12.09.23" />
         </div>
       </div>
-    </Reveal>
   )
 }
 

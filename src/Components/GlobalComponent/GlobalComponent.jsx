@@ -1,9 +1,10 @@
 import '../GlobalComponent/Global.css';
-import { useContext } from 'react';
+import { useContext, useEffect, useRef } from 'react';
 import { MyContext } from '../Header/Header';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import PropTypes from 'prop-types';
-import { motion } from 'framer-motion';
+import { motion, useInView, useAnimation } from 'framer-motion';
+
 
 const PopupMenu = () => {
     const { isopen, MenuOpenClose } = useContext(MyContext);
@@ -53,18 +54,52 @@ const CustomButton = () => {
 }
 
 const Reveal = ({ children }) => {
+    const ref = useRef(0);
+    const isInView = useInView(ref, {once:true});
+    const mainControls = useAnimation();
+    const slideControls = useAnimation();
+    useEffect(()=>{
+        if(isInView){
+            mainControls.start("visible");
+            slideControls.start("visible");
+        }
+    },[isInView])
     return (
+        <span ref={ref}
+            style={{ position: "relative", width:'100%', overflow:"hidden"}}    
+        >
         <motion.div
             variants={{
-                hidden: { opacity: 0, y: -75 },
+                hidden: { opacity: 0, y: 100 },
                 visible: { opacity: 1, y: 0 }
             }}
             initial="hidden"
-            animate="visible"
+            animate={mainControls}
             transition={{ duration: 0.5, delay: 0.25 }}
         >
             {children}
         </motion.div>
+        <motion.dev
+            variants={{
+                hidden: {left:0},
+                visible: {left:"100%"},
+            }}
+            initial="hidden"
+            animate={slideControls}
+            transition={{duration:1, ease:"easeIn"}}
+            style={{
+                position:'absolute',
+                top: 4,
+                bottom: 4,
+                left: 0,
+                right: 0,
+                background: "linear-gradient(90deg, rgb(0, 102, 255, 0.23), rgb(4, 255, 8))",
+                zindex: 20,
+            }}
+        >
+
+        </motion.dev>
+        </span>
     );
 }
 
@@ -72,12 +107,12 @@ const RevealX = ({ children }) => {
     return (
         <motion.div
             variants={{
-                hidden: { opacity: 0, x: 60 },
-                visible: { opacity: 1, x: 0 }
+                hidden: { opacity: 0, left: 60 },
+                visible: { opacity: 1, right: 0 }
             }}
             initial="hidden"
             animate="visible"
-            transition={{ duration: 0.5, delay: 0.25 }}
+            transition={{ duration: 1, delay: 0.5 }}
         >
             {children}
         </motion.div>

@@ -8,29 +8,27 @@ import { FaNodeJs } from "react-icons/fa";
 
 const Skills = () => {
   return (
-    <Reveal>
       <div className="Container--skill" id="skill">
         <SectionTitle title="Skills" />
         <div className="Skills">
-          <AiFillHtml5 className="icon" />
-          <FaCss3 className="icon" />
-          <FaGitAlt className="icon" />
-          <FaReact className="icon" />
-          <FaPython className="icon" />
-          <SiFlutter className="icon" />
-          <SiRedux className="icon" />
-          <SiJavascript className="icon" />
-          <SiFigma className="icon" />
-          <SiTailwindcss className="icon" />
-          <SiFirebase className="icon" />
-          <FaNodeJs className="icon" />
-          <SiFlask className="icon" />
-          <SiStreamlit className="icon" />
-          <SiBootstrap className="icon" />
-          <SiMongodb className="icon" />
+          <Reveal><AiFillHtml5 className="icon" /></Reveal>
+          <Reveal><FaCss3 className="icon" /></Reveal>
+          <Reveal><FaGitAlt className="icon" /></Reveal>
+          <Reveal><FaReact className="icon" /></Reveal>
+          <Reveal><FaPython className="icon" /></Reveal>
+          <Reveal><SiFlutter className="icon" /></Reveal>
+          <Reveal><SiRedux className="icon" /></Reveal>
+          <Reveal><SiJavascript className="icon" /></Reveal>
+          <Reveal><SiFigma className="icon" /></Reveal>
+          <Reveal><SiTailwindcss className="icon" /></Reveal>
+          <Reveal><SiFirebase className="icon" /></Reveal>
+          <Reveal><FaNodeJs className="icon" /></Reveal>
+          <Reveal><SiFlask className="icon" /></Reveal>
+          <Reveal><SiStreamlit className="icon" /></Reveal>
+          <Reveal><SiBootstrap className="icon" /></Reveal>
+          <Reveal><SiMongodb className="icon" /></Reveal>
         </div>
       </div>
-    </Reveal>
   )
 }
 
