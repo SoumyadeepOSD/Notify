@@ -1,6 +1,10 @@
 :root{
   --black-color: #0000;
 }
+html{
+  scroll-behavior: smooth;
+}
+
 
 *{
   padding: 0;
