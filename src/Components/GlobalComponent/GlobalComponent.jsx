@@ -15,11 +15,21 @@ const PopupMenu = () => {
                     ? <AiOutlineClose onClick={MenuOpenClose} className='Mobile--menu--icon' />
                     : <AiOutlineMenu onClick={MenuOpenClose} className='Mobile--menu--icon' />
             }
-            <p className="mobileTab">Home</p>
-            <p className="mobileTab">Skills</p>
-            <p className="mobileTab">Projects</p>
-            <p className="mobileTab">Experience</p>
-            <p className="mobileTab">Contact</p>
+            <a href="/">
+                <p className="mobileTab">Home</p>
+            </a>
+            <a href="#skill">
+                <p className="mobileTab">Skills</p>
+            </a>
+            <a href="#project">
+                <p className="mobileTab">Projects</p>
+            </a>
+            <a href="#experience">
+                <p className="mobileTab">Experience</p>
+            </a>
+            <a href="#contact">
+                <p className="mobileTab">Contact</p>
+            </a>
 
         </div>
     );
@@ -55,50 +65,50 @@ const CustomButton = () => {
 
 const Reveal = ({ children }) => {
     const ref = useRef(0);
-    const isInView = useInView(ref, {once:true});
+    const isInView = useInView(ref, { once: true });
     const mainControls = useAnimation();
     const slideControls = useAnimation();
-    useEffect(()=>{
-        if(isInView){
+    useEffect(() => {
+        if (isInView) {
             mainControls.start("visible");
             slideControls.start("visible");
         }
-    },[isInView])
+    }, [isInView])
     return (
         <span ref={ref}
-            style={{ position: "relative", width:'100%', overflow:"hidden"}}    
+            style={{ position: "relative", width: '100%', overflow: "hidden" }}
         >
-        <motion.div
-            variants={{
-                hidden: { opacity: 0, y: 100 },
-                visible: { opacity: 1, y: 0 }
-            }}
-            initial="hidden"
-            animate={mainControls}
-            transition={{ duration: 0.5, delay: 0.25 }}
-        >
-            {children}
-        </motion.div>
-        <motion.dev
-            variants={{
-                hidden: {left:0},
-                visible: {left:"100%"},
-            }}
-            initial="hidden"
-            animate={slideControls}
-            transition={{duration:1, ease:"easeIn"}}
-            style={{
-                position:'absolute',
-                top: 4,
-                bottom: 4,
-                left: 0,
-                right: 0,
-                background: "linear-gradient(90deg, rgb(0, 102, 255, 0.23), rgb(4, 255, 8))",
-                zindex: 20,
-            }}
-        >
+            <motion.div
+                variants={{
+                    hidden: { opacity: 0, y: 100 },
+                    visible: { opacity: 1, y: 0 }
+                }}
+                initial="hidden"
+                animate={mainControls}
+                transition={{ duration: 0.5, delay: 0.25 }}
+            >
+                {children}
+            </motion.div>
+            <motion.dev
+                variants={{
+                    hidden: { left: 0 },
+                    visible: { left: "100%" },
+                }}
+                initial="hidden"
+                animate={slideControls}
+                transition={{ duration: 1, ease: "easeIn" }}
+                style={{
+                    position: 'absolute',
+                    top: 4,
+                    bottom: 4,
+                    left: 0,
+                    right: 0,
+                    background: "linear-gradient(90deg, rgb(0, 102, 255, 0.23), rgb(4, 255, 8))",
+                    zindex: 20,
+                }}
+            >
 
-        </motion.dev>
+            </motion.dev>
         </span>
     );
 }
