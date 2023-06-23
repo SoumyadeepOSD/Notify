@@ -1,9 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
 import '../Hero/Hero.css';
 import "@lottiefiles/lottie-player";
+import { Reveal } from '../GlobalComponent/GlobalComponent';
 
 const Hero = () => {
     return (
+        <Reveal>
         <div className="Container--hero large-spacing">
             <div>
                 <h1 className='big--text'>Hi, I'm <span className='gradient--text'>Soumyadeep</span></h1>
@@ -20,6 +22,7 @@ const Hero = () => {
             >
             </lottie-player>
         </div>
+        </Reveal>
     )
 }
 
