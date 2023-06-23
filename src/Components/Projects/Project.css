@@ -47,6 +47,9 @@ button{
     border-radius: 0.5rem;
     padding-inline: 1rem;
 }
+#project--title{
+    color: rgb(0, 38, 255);
+}
 
 @media (max-width: 1000px) {
     .projects{

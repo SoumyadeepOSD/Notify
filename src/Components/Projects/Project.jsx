@@ -1,6 +1,7 @@
 import { RevealX, SectionTitle } from "../GlobalComponent/GlobalComponent";
 import '../Projects/Project.css';
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
+import { projectData } from "../../../public/data";
 
 
 const Projects = () => {
@@ -9,17 +10,6 @@ const Projects = () => {
       <div className="Container--project" id="project">
         <SectionTitle title="Projects" />
         <div className="projects">
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
           <ProjectCard />
         </div>
       </div>
@@ -30,18 +20,24 @@ const Projects = () => {
 
 const ProjectCard = () => {
   return (
+    projectData.map((e, i) => {
+      return (
+        <motion.div
+          key={i}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          className="Container--card">
+          <img src={e.url} alt="image" className="card--image" />
+          <h2 id="project--title">{e.title}</h2>
+          <p>{e.description}</p>
+          <div className="card--bottom">
+            <button>Live</button>
+            <button>Code</button>
+          </div>
+        </motion.div>
 
-    <motion.div
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.9 }}
-      className="Container--card">
-      <img src="https://rb.gy/q4ye0" alt="image" className="card--image" />
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni eveniet eum adipisci!</p>
-      <div className="card--bottom">
-        <button>Live</button>
-        <button>Code</button>
-      </div>
-    </motion.div>
+      );
+    })
 
   );
 }
