@@ -20,21 +20,21 @@ const Experience = () => {
                   Position={e.Position}
                   Desc={e.Desc}
                   Start={e.Start}
+                  Link={e.Link}
                   End={e.End} />
                 </Reveal>
               );
             })
           }
-          <ExperienceCard Position="Developer" Desc="Best Developer" Start="21.02.2021" End="12.09.23" />
         </div>
       </div>
   )
 }
 
 
-const ExperienceCard = ({ Position, Desc, Start, End, id }) => {
+const ExperienceCard = ({ Position, Desc, Start, End, id, Link }) => {
   return (
-    <div className="ExpCard">
+    <div className="ExpCard" onClick={()=>{location.href = Link}}>
       <div className="numbering">
         <span className="number">{id == 1 ?
           <Bs1Circle size={20} /> : id == 2 ?
@@ -44,7 +44,7 @@ const ExperienceCard = ({ Position, Desc, Start, End, id }) => {
                 <Bs5Circle size={20} />}</span>
         <p className="title">{Position}</p>
       </div>
-      <p className="desc">{Desc}</p>
+      <pre className="desc">{Desc}</pre>
       <p className="start">from: {Start}</p>
       <p className="end">to: {End}</p>
       <div className="verticle--line"></div>
@@ -58,5 +58,6 @@ ExperienceCard.propTypes = {
   Desc: PropTypes.string.isRequired,
   Start: PropTypes.string.isRequired,
   End: PropTypes.string.isRequired,
-  id: PropTypes.number.isRequired
+  id: PropTypes.number.isRequired,
+  Link: PropTypes.string.isRequired
 }
