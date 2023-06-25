@@ -31,8 +31,8 @@ const ProjectCard = () => {
           <h2 id="project--title">{e.title}</h2>
           <p>{e.description}</p>
           <div className="card--bottom">
-            <button>Live</button>
-            <button>Code</button>
+            <button><a className="btn" href={e.deploy}>Live</a></button>
+            <button><a className="btn" href={e.source}>Code</a></button>
           </div>
         </motion.div>
 

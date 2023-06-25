@@ -5,6 +5,9 @@
     align-items: center;
     justify-content: center;
 }
+.btn:hover{
+    color: white;
+}
 
 .projects{
     display: grid;
