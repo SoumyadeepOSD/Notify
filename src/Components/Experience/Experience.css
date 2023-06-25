@@ -35,6 +35,7 @@
 .end{
     color: grey;
     max-lines: 3;
+    word-wrap: normal;
 }
 
 @media (min-width: 850px) {

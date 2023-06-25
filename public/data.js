@@ -3,7 +3,7 @@ const data =
         {
             "id": 1,
             "Position": "GetStream.io Hackathon",
-            "Desc": "Developed a chatting application using React and Stream Chat SDK",
+            "Desc": "Developed a chatting application \nusing React and Stream Chat SDK",
             "Start": "16.12.2022",
             "End": "19.12.2022",
             "Link":"https://devpost.com/software/community-chatroom"
@@ -11,15 +11,15 @@ const data =
         {
             "id": 2,
             "Position": "Kavach Hackathon",
-            "Desc": "Made a security application that could detect the malicious messages and alert users from harmful activity in their mobile",
+            "Desc": "Made a security application that could detect \nthe malicious messages and alert users \nfrom harmful activity in their mobile",
             "Start": "21.02.2021",
             "End": "12.09.23",
             "Link":"https://drive.google.com/file/d/1Nqcb-n8I6IqSG8uUimyCbsum2b86qFXU/view?usp=sharing"
         },
         {
             "id": 3,
-            "Position": "Google Solution Intra-College Hackathon",
-            "Desc": "Made a mobile application in flutter that could help people to solve the UN's #2nd goal 'Zero-Hunger'",
+            "Position": "GDSCIntra-College Hackathon",
+            "Desc": "Made a mobile application in flutter that \ncould help people to solve \nthe UN's #2nd goal 'Zero-Hunger'",
             "Start": "21.02.2021",
             "End": "12.09.23",
             "Link":"https://github.com/SoumyadeepOSD/Hack_Hunger"
@@ -27,7 +27,7 @@ const data =
         {
             "id": 4,
             "Position": "Hackathon Evangelist",
-            "Desc": "Evagelist for Hack4Bengal to \n promote Hackathon culture among folks",
+            "Desc": "Evagelist for Hack4Bengal to promote \nHackathon culture among folks",
             "Start": "21.02.2021",
             "End": "12.09.23",
             "Link":"https://twitter.com/SoumyadeepDasB6/status/1641279605888917505?s=20"
