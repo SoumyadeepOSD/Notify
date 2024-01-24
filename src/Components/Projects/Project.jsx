@@ -26,7 +26,7 @@ const ProjectCard = () => {
           className="Container--card">
           <img src={e.url} alt="image" className="card--image" />
           <h2 id="project--title">{e.title}</h2>
-          <p>{e.description}</p>
+          <p id="description">{e.description}</p>
           <div className="card--bottom">
             <button 
             className="btn"
